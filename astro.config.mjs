@@ -10,22 +10,22 @@
 //   }
 // });
 
-// import { defineConfig } from 'astro/config';
-// import tailwind from '@astrojs/tailwind';
-
-// export default defineConfig({
-//   integrations: [tailwind()],
-//   output: 'static'
-// });
-
-
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import github from '@astrojs/github';
 
 export default defineConfig({
   integrations: [tailwind()],
-  output: 'static',
-  adapter: github(),
-  base: '/mi-portafolio/', // Cambia esto por el nombre de tu repo si no es la raíz
+  output: 'static'
 });
+
+
+// import { defineConfig } from 'astro/config';
+// import tailwind from '@astrojs/tailwind';
+// import github from '@astrojs/github-pages';
+
+// export default defineConfig({
+//   integrations: [tailwind()],
+//   output: 'static',
+//   adapter: github(),
+//   base: '/portafolio-rs/', // Cambia esto por el nombre de tu repo si no es la raíz
+// });
