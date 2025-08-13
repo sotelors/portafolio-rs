@@ -1,0 +1,146 @@
+---
+const experience = [
+  {
+    position:
+      "Support Manager Regional / Ingeniero de Implementación de Sistemas",
+    company: "Credit Force",
+    period: "Actualidad",
+    description:
+      "Liderazgo del área de Soporte Aplicativo, desarrollo de sistemas web ASP.NET, administración de bases de datos SQL Server y análisis de flujos de trabajo.",
+  },
+  {
+    position: "IT Support Engineer III",
+    company: "Empresa Tecnológica",
+    period: "Anterior",
+    description:
+      "Soporte aplicativo en entornos de producción, implementación de mejoras a los sistemas existentes, gestión de incidentes y resolución de problemas técnicos.",
+  },
+  {
+    position: "Analista Programador",
+    company: "Kuiki Credit",
+    period: "2019-2021",
+    description:
+      "Desarrollo de sistemas web (C# ASP.NET) y sistemas de escritorio, administración de bases de datos SQL Server, análisis de requerimientos de software.",
+  },
+  {
+    position: "Desarrollador de Software",
+    company: "Grupo TX / Telefónica Movistar",
+    period: "2016-2019",
+    description:
+      "Desarrollo de sistemas web en C# ASP.NET, administración de bases de datos SQL Server, análisis de flujos de trabajo para optimizar procesos.",
+  },
+];
+
+const education = [
+  {
+    degree: "Ingeniería en Computación",
+    institution: "Universidad Nacional de Ingeniería",
+    location: "Managua, Nicaragua",
+    period: "2012-2016",
+  },
+];
+
+const certifications = [
+  "Curso Scrum Fundamentals Certified (2022)",
+  "Desarrollo HTML5 y CSS (Certificado) (2019)",
+  "Amazon AWS Desarrollo. Curso de AWS programador certificado (2021)",
+  "React De cero a experto (Hooks y MERN) (2021)",
+  "Amazon AWS: Curso Completo Arquitecto Soluciones Certificado (2020)",
+  "Patrones de diseño en C# Aplicados en ASP .Net (2023)",
+  "Fundamentos de PostgreSQL (2021)",
+];
+---
+
+<section id="sobre-mi" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">📄 Sobre Mí</h2>
+      <p class="text-xl text-gray-600">
+        Mi trayectoria profesional y formación
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      Perfil
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Mi Perfil</h3>
+        <div class="bg-gray-50 rounded-xl p-6 mb-8">
+          <p class="text-gray-700 leading-relaxed">
+            Profesional en ingeniería en computación, desarrollador de software
+            Senior Manager con experiencia en análisis de procesos de
+            desarrollo. Competente en la creación de aplicaciones web y de
+            escritorio, administración de bases de datos SQL Server. Apasionado
+            por el desarrollo de soluciones tecnológicas eficientes y de alta
+            calidad.
+          </p>
+        </div>
+
+        Educación
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">🎓 Educación</h3>
+        {
+          education.map((edu) => (
+            <div class="bg-blue-50 rounded-lg p-4 mb-4">
+              <h4 class="font-bold text-gray-900">{edu.degree}</h4>
+              <p class="text-blue-600 font-medium">{edu.institution}</p>
+              <p class="text-gray-600 text-sm">
+                {edu.location} | {edu.period}
+              </p>
+            </div>
+          ))
+        }
+
+        Certificaciones
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 mt-8">
+          🏆 Certificaciones
+        </h3>
+        <div class="space-y-2">
+          {
+            certifications.map((cert) => (
+              <div class="flex items-center">
+                <span class="text-green-500 mr-2">✓</span>
+                <span class="text-gray-700">{cert}</span>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      Experiencia
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">
+          💼 Experiencia Laboral
+        </h3>
+        <div class="space-y-6">
+          {
+            experience.map((job, index) => (
+              <div class="relative">
+                {index !== experience.length - 1 && (
+                  <div class="absolute left-4 top-12 w-0.5 h-full bg-blue-200" />
+                )}
+                <div class="flex items-start">
+                  <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-4 relative z-10">
+                    <span class="text-white text-sm font-bold">
+                      {index + 1}
+                    </span>
+                  </div>
+                  <div class="flex-1">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                      <h4 class="font-bold text-gray-900 mb-1">
+                        {job.position}
+                      </h4>
+                      <p class="text-blue-600 font-medium mb-1">
+                        {job.company}
+                      </p>
+                      <p class="text-gray-500 text-sm mb-3">{job.period}</p>
+                      <p class="text-gray-700 text-sm">{job.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
