@@ -9,10 +9,7 @@
     "build": "astro build",
     "start": "astro dev",
     "preview": "astro preview",
-    "astro": "astro",
-    "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"     
+    "astro": "astro" 
   },
   "dependencies": {
     "@astrojs/tailwind": "^6.0.2",
